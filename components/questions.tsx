@@ -55,7 +55,7 @@ const questions: Array<{
 
 export function Questions() {
   return (
-    <section className="mx-auto max-w-[1180px] px-5 pb-16 lg:px-8 lg:pb-20" aria-labelledby="questions-heading">
+    <section className="mx-auto max-w-8xl px-5 pb-16 lg:px-8 lg:pb-20" aria-labelledby="questions-heading">
       <SectionHeading
         eyebrow="What founders ask us"
         title="Six founder questions — and how we answer them"

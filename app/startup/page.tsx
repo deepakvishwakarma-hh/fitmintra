@@ -121,7 +121,7 @@ const steps: Array<{ n: string; icon: IconName; title: string; body: string; ton
 export default function StartupPage() {
   return (
     <>
-      <section className="mx-auto grid max-w-[1180px] items-center gap-10 px-5 py-12 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-16">
+      <section className="mx-auto grid max-w-8xl items-center gap-10 px-5 py-12 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-16">
         <div>
           <p className="text-[11px] font-semibold tracking-[0.18em] text-[#7f93a6] uppercase">
             Startup FinMitra
@@ -163,7 +163,7 @@ export default function StartupPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1180px] px-5 py-8 lg:px-8 lg:py-12" aria-labelledby="get-heading">
+      <section className="mx-auto max-w-8xl px-5 py-8 lg:px-8 lg:py-12" aria-labelledby="get-heading">
         <p className="text-[11px] font-semibold tracking-[0.18em] text-[#7f93a6] uppercase">What you get</p>
         <h2
           id="get-heading"
@@ -196,7 +196,7 @@ export default function StartupPage() {
       </div>
 
       <section id="plans" className="scroll-mt-24 bg-white" aria-labelledby="plans-heading">
-        <div className="mx-auto max-w-[1180px] px-5 py-16 lg:px-8">
+        <div className="mx-auto max-w-8xl px-5 py-16 lg:px-8">
           <p className="text-[11px] font-semibold tracking-[0.18em] text-[#7f93a6] uppercase">
             Subscription plans
           </p>
@@ -248,7 +248,7 @@ export default function StartupPage() {
       </section>
 
       <section className="bg-[#f7fafc]" aria-labelledby="works-heading">
-        <div className="mx-auto max-w-[1180px] px-5 py-16 lg:px-8">
+        <div className="mx-auto max-w-8xl px-5 py-16 lg:px-8">
           <p className="text-[11px] font-semibold tracking-[0.18em] text-[#7f93a6] uppercase">How it works</p>
           <h2
             id="works-heading"
@@ -278,7 +278,7 @@ export default function StartupPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1180px] px-5 py-16 lg:px-8" aria-labelledby="cases-heading">
+      <section className="mx-auto max-w-8xl px-5 py-16 lg:px-8" aria-labelledby="cases-heading">
         <p className="text-[11px] font-semibold tracking-[0.18em] text-[#7f93a6] uppercase">Case studies</p>
         <h2
           id="cases-heading"
@@ -302,7 +302,7 @@ export default function StartupPage() {
       </section>
 
       <section className="px-5 pb-16 lg:px-8">
-        <div className="mx-auto grid max-w-[1180px] overflow-hidden rounded-[28px] bg-[#e7f4fb] lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="mx-auto grid max-w-8xl overflow-hidden rounded-[28px] bg-[#e7f4fb] lg:grid-cols-[0.9fr_1.1fr]">
           <div className="flex flex-col justify-center px-7 py-10 lg:px-12">
             <h2 className="max-w-md text-[2rem] leading-[1.15] font-bold tracking-[-0.03em] text-ink sm:text-[2.4rem]">
               Ready to simplify your <span className="text-teal">startup finances?</span>

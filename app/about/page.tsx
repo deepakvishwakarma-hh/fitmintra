@@ -33,7 +33,7 @@ export default function AboutPage() {
         title="A partner in your growth story."
         lede="We work with ambitious founders to build strong financial foundations, navigate complexity and create long-term value."
       />
-      <section className="mx-auto grid max-w-[1180px] items-center gap-10 px-5 py-14 lg:grid-cols-2 lg:px-8">
+      <section className="mx-auto grid max-w-8xl items-center gap-10 px-5 py-14 lg:grid-cols-2 lg:px-8">
         <div className="grid gap-4">
           {points.map((point) => (
             <article key={point.title} className="rounded-[18px] border border-line bg-white p-5">
@@ -58,12 +58,12 @@ export default function AboutPage() {
             src="/images/office.jpg"
             alt="A modern office with a glass meeting room, wood ceiling and indoor plants"
             fill
-            sizes="(max-width: 1024px) 100vw, 560px"
+            sizes="(max-width: 1024px) 100vw, 740px"
             className="object-cover"
           />
           <div className="absolute inset-0 flex items-center justify-center bg-[#0c2340]/10 p-6">
-            <div className="rounded-2xl bg-[#0c2340]/40 px-6 py-4 backdrop-blur-[2px]">
-              <Logo variant="light" size="lg" />
+            <div className="rounded-2xl bg-white px-5 py-3 shadow-lg">
+              <Logo size="lg" />
             </div>
           </div>
         </div>

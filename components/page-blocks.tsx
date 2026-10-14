@@ -13,7 +13,7 @@ export function PageIntro({
 }) {
   return (
     <section className="border-b border-line bg-[linear-gradient(180deg,#f4faf8_0%,#ffffff_70%)]">
-      <div className="mx-auto max-w-[1180px] px-5 py-14 lg:px-8 lg:py-16">
+      <div className="mx-auto max-w-8xl px-5 py-14 lg:px-8 lg:py-16">
         <p className="text-[11px] font-semibold tracking-[0.18em] text-[#8090a0] uppercase">{eyebrow}</p>
         <h1 className="mt-3 max-w-3xl text-4xl leading-[1.12] font-bold tracking-[-0.03em] text-ink md:text-5xl">
           {title}
@@ -43,7 +43,7 @@ export function Checklist({ title, items }: { title: string; items: string[] }) 
 export function ContactBand({ children }: { children?: ReactNode }) {
   return (
     <section className="px-5 pb-16 lg:px-8">
-      <div className="mx-auto flex max-w-[1180px] flex-col items-start justify-between gap-6 rounded-[22px] bg-navy px-7 py-8 text-white sm:flex-row sm:items-center sm:px-10">
+      <div className="mx-auto flex max-w-8xl flex-col items-start justify-between gap-6 rounded-[22px] bg-navy px-7 py-8 text-white sm:flex-row sm:items-center sm:px-10">
         <div>
           <h2 className="text-2xl font-bold tracking-tight">Tell us about your company</h2>
           <p className="mt-2 max-w-md text-sm leading-6 text-white/75">

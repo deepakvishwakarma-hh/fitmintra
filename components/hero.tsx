@@ -46,7 +46,7 @@ function HeroCopy() {
 
 export function Hero() {
   return (
-    <section className="mx-auto max-w-[1180px] px-5 pt-6 pb-4 lg:px-8 lg:pt-8" aria-labelledby="hero-heading">
+    <section className="mx-auto max-w-8xl px-5 pt-6 pb-4 lg:px-8 lg:pt-8" aria-labelledby="hero-heading">
       <div className="lg:relative">
         <div className="relative z-10 mb-6 lg:absolute lg:inset-0 lg:mb-0 lg:flex lg:items-center lg:px-12 xl:px-14">
           <HeroCopy />
@@ -57,7 +57,7 @@ export function Hero() {
           alt="Sunrise over snow-covered peaks, with a forest trail climbing toward the summit"
           fill
           preload
-          sizes="(max-width: 1200px) 100vw, 1180px"
+          sizes="(max-width: 1536px) 100vw, 1536px"
           className="object-cover object-[72%_58%]"
         />
         <div className="absolute inset-y-0 left-0 hidden w-[58%] bg-gradient-to-r from-white/88 via-white/55 to-transparent lg:block" />

@@ -12,7 +12,7 @@ const legal = [
 export function Footer() {
   return (
     <footer className="bg-navy text-white">
-      <div className="mx-auto grid max-w-[1180px] gap-10 px-5 py-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr] lg:px-8 lg:py-14">
+      <div className="mx-auto grid max-w-8xl gap-10 px-5 py-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr] lg:px-8 lg:py-14">
         <div>
           <Link href="/" aria-label="FinMitra home">
             <Logo variant="light" />

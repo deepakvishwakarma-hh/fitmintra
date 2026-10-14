@@ -72,7 +72,7 @@ const stages: Array<{
 export function Journey() {
   return (
     <section className="bg-white" aria-labelledby="journey-heading">
-      <div className="mx-auto max-w-[1180px] px-5 pt-16 pb-20 lg:px-8 lg:pt-20 lg:pb-24">
+      <div className="mx-auto max-w-8xl px-5 pt-16 pb-20 lg:px-8 lg:pt-20 lg:pb-24">
         <p className="text-[11px] font-semibold tracking-[0.18em] text-[#7f93a6] uppercase">
           Services mapped to your journey
         </p>

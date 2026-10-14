@@ -26,13 +26,13 @@ export default function CfoPage() {
         title="A CFO office for the stage you are in."
         lede="Customised CFO support for Series A and growth-stage startups — runway, controls and investor reporting without hiring the full office too early."
       />
-      <section className="mx-auto grid max-w-[1180px] items-center gap-10 px-5 py-14 lg:grid-cols-2 lg:px-8">
+      <section className="mx-auto grid max-w-8xl items-center gap-10 px-5 py-14 lg:grid-cols-2 lg:px-8">
         <div className="relative order-1 aspect-[16/10] overflow-hidden rounded-[22px] lg:order-2">
           <Image
             src="/images/bonsai.jpg"
             alt="A bonsai pine rooted on a rock in still water at sunrise"
             fill
-            sizes="(max-width: 1024px) 100vw, 560px"
+            sizes="(max-width: 1024px) 100vw, 740px"
             className="object-cover object-right"
           />
         </div>

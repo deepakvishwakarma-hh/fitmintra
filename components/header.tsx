@@ -74,9 +74,9 @@ function HeaderBar({
 }) {
   return (
     <header className="sticky top-0 z-50 border-b border-[#eef3f7] bg-white/95 backdrop-blur-md">
-      <div className="mx-auto flex h-[76px] max-w-[1180px] items-center gap-4 px-5 lg:px-8">
+      <div className="mx-auto flex h-[76px] max-w-8xl items-center gap-4 px-5 lg:px-8">
         <Link href="/" aria-label="FinMitra home" className="shrink-0" onClick={onNavigate}>
-          <Logo />
+          <Logo preload />
         </Link>
 
         <nav className="ml-6 hidden items-center gap-5 lg:flex" aria-label="Primary">

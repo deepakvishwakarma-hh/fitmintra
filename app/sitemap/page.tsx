@@ -22,7 +22,7 @@ export default function SitemapPage() {
         title="Every page, in one list."
         lede="Jump to a service, the company story, or the enquiry form."
       />
-      <ul className="mx-auto grid max-w-[1180px] gap-3 px-5 py-12 sm:grid-cols-2 lg:grid-cols-3 lg:px-8">
+      <ul className="mx-auto grid max-w-8xl gap-3 px-5 py-12 sm:grid-cols-2 lg:grid-cols-3 lg:px-8">
         {pages.map((page) => (
           <li key={page.href}>
             <Link

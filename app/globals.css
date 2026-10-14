@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme inline {
+  --container-8xl: 96rem;
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
   --color-navy: #0c2340;
   --color-ink: #12263a;
@@ -23,6 +24,10 @@ html {
 ::selection {
   background: #d7f3ea;
   color: #0c2340;
+}
+
+@utility max-w-8xl {
+  max-width: var(--container-8xl);
 }
 
 body {

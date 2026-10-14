@@ -28,7 +28,7 @@ const services = [
 
 export function Services() {
   return (
-    <section className="mx-auto max-w-[1180px] px-5 py-16 lg:px-8 lg:py-20" aria-labelledby="services-heading">
+    <section className="mx-auto max-w-8xl px-5 py-16 lg:px-8 lg:py-20" aria-labelledby="services-heading">
       <SectionHeading
         eyebrow="Our services"
         title={

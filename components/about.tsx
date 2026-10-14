@@ -6,7 +6,7 @@ import { Logo } from "@/components/logo";
 export function About() {
   return (
     <section id="about" className="scroll-mt-24 bg-white" aria-labelledby="about-heading">
-      <div className="mx-auto grid max-w-[1180px] items-center gap-10 px-5 py-16 lg:grid-cols-2 lg:px-8 lg:py-20">
+      <div className="mx-auto grid max-w-8xl items-center gap-10 px-5 py-16 lg:grid-cols-2 lg:px-8 lg:py-20">
         <div>
           <p className="text-[11px] font-semibold tracking-[0.18em] text-[#8090a0] uppercase">About FinMitra</p>
           <h2
@@ -35,13 +35,13 @@ export function About() {
             src="/images/office.jpg"
             alt="A modern office with a glass meeting room, wood ceiling and indoor plants"
             fill
-            sizes="(max-width: 1024px) 100vw, 560px"
+            sizes="(max-width: 1024px) 100vw, 740px"
             className="object-cover"
           />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,18,32,0.08),rgba(8,18,32,0.18))]" />
           <div className="absolute inset-0 flex items-center justify-center p-6">
-            <div className="rounded-2xl bg-[#0c2340]/35 px-6 py-4 shadow-lg backdrop-blur-[2px]">
-              <Logo variant="light" size="lg" />
+            <div className="rounded-2xl bg-white px-5 py-3 shadow-lg">
+              <Logo size="lg" />
             </div>
           </div>
         </div>
