@@ -22,6 +22,9 @@ export type IconName =
   | "target"
   | "fileCheck"
   | "cursor"
+  | "wallet"
+  | "presentation"
+  | "sprout"
   | "flag"
   | "linkedin"
   | "x"
@@ -151,6 +154,30 @@ const paths: Record<IconName, ReactNode> = {
   ),
   cursor: (
     <path d="M6 4.2 6 16.2l3.1-3 2.6 5.2 1.8-.9-2.6-5.1H16L6 4.2Z" />
+  ),
+  wallet: (
+    <>
+      <rect x="3.5" y="6.5" width="17" height="12" rx="2" />
+      <path d="M3.5 10.5h17" />
+      <circle cx="16.2" cy="14.2" r="0.8" fill="currentColor" stroke="none" />
+    </>
+  ),
+  sprout: (
+    <>
+      <path d="M12 21V11" />
+      <path d="M12 15c0-3.6 2.8-6 6.4-6.6-.8 3.6-2.8 5.6-6.4 6.6Z" />
+      <path d="M12 17c0-2.8-2.2-4.8-5.2-5.4.8 3 2.4 4.6 5.2 5.4Z" />
+    </>
+  ),
+  presentation: (
+    <>
+      <rect x="4" y="3.5" width="16" height="11" rx="1.6" />
+      <path d="M12 14.5V19" />
+      <path d="M8.5 19.5h7" />
+      <path d="M8 11V8.2" />
+      <path d="M12 11V6.8" />
+      <path d="M16 11V9.2" />
+    </>
   ),
   globe: (
     <>
