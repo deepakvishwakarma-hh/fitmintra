@@ -53,45 +53,16 @@ export function Hero() {
         </div>
         <div className="relative h-[280px] overflow-hidden rounded-[28px] sm:h-[360px] lg:h-[520px]">
         <Image
-          src="/images/hero-mountains.jpg"
+          src="/banner3.png"
           alt="Sunrise over snow-covered peaks, with a forest trail climbing toward the summit"
           fill
           preload
           sizes="(max-width: 1536px) 100vw, 1536px"
           className="object-cover object-[72%_58%]"
         />
-        <div className="absolute inset-y-0 left-0 hidden w-[58%] bg-gradient-to-r from-white/88 via-white/55 to-transparent lg:block" />
+        <div className="absolute inset-y-0 left-0 hidden w-[58%] bg-gradient-to-r from-blue-50 via-white/80 to-transparent lg:block" />
 
-        <div className="pointer-events-none absolute inset-0 hidden lg:block" aria-hidden>
-          <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="absolute inset-0 h-full w-full">
-            <path
-              d="M55 80 C 60 68, 64 58, 68 48 S 75 28, 80 16"
-              fill="none"
-              stroke="white"
-              strokeWidth="0.55"
-              strokeDasharray="1.15 1.35"
-              strokeLinecap="round"
-              vectorEffect="non-scaling-stroke"
-            />
-          </svg>
-          {markers.map((marker) => (
-            <span
-              key={marker.label}
-              className="trail-label absolute -translate-x-1/2 -translate-y-1/2 text-[13px] font-semibold whitespace-nowrap text-white"
-              style={{ left: marker.left, top: marker.top }}
-            >
-              <span className="mr-1.5 inline-block h-2 w-2 rounded-full bg-white shadow-[0_0_0_3px_rgba(255,255,255,0.35)]" />
-              {marker.label}
-            </span>
-          ))}
-          <span
-            className="trail-label absolute inline-flex -translate-x-1/2 -translate-y-1/2 items-center gap-1.5 text-[13px] font-bold whitespace-nowrap text-white"
-            style={{ left: "78%", top: "14%" }}
-          >
-            <Icon name="flag" className="h-4 w-4" />
-            What&apos;s Next
-          </span>
-        </div>
+
       </div>
       </div>
     </section>

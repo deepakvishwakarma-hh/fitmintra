@@ -16,7 +16,7 @@ export function SectionHeading({
       <p className="text-[11px] font-semibold tracking-[0.18em] text-[#8090a0] uppercase">{eyebrow}</p>
       <h2
         id={headingId}
-        className="mt-2 max-w-[680px] text-[1.85rem] leading-[1.18] font-bold tracking-[-0.025em] text-ink sm:text-[2.15rem]"
+        className="mt-2 max-w-5xl text-[1.85rem] leading-[1.18] font-bold tracking-[-0.025em] text-ink sm:text-[2.15rem]"
       >
         {title}
       </h2>

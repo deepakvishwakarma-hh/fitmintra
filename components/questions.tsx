@@ -55,7 +55,7 @@ const questions: Array<{
 
 export function Questions() {
   return (
-    <section className="mx-auto max-w-8xl px-5 pb-16 lg:px-8 lg:pb-20" aria-labelledby="questions-heading">
+    <section className="mx-auto max-w-8xl px-5 pb-5 lg:px-8 lg:pb-10" aria-labelledby="questions-heading">
       <SectionHeading
         eyebrow="What founders ask us"
         title="Six founder questions — and how we answer them"
@@ -70,9 +70,10 @@ export function Questions() {
             <Icon name={item.icon} className="h-7 w-7 text-[#1c7f8c]" />
             <h3 className="mt-4 text-[15px] leading-snug font-semibold text-ink">{item.question}</h3>
             <p className="mt-2 text-[13px] leading-5 text-muted">{item.answer}</p>
+            <br />
             <Link
               href={item.href}
-              className="mt-4 inline-flex items-center gap-1 text-[13px] font-semibold text-navy hover:text-teal"
+              className="mt-auto inline-flex items-center gap-1 text-[13px] font-semibold text-navy hover:text-teal"
             >
               {item.label}
               <Icon name="arrow" className="h-3.5 w-3.5" />

@@ -1,17 +1,19 @@
-import { Icon, type IconName } from "@/components/icons";
+import { BarChart3, ChevronRight, Cog, Lightbulb, Rocket, Target, type LucideIcon } from "lucide-react";
 
 const stages: Array<{
   n: string;
   title: string;
-  icon: IconName;
-  tone: string;
+  icon: LucideIcon;
+  card: string;
+  iconColor: string;
   items: string[];
 }> = [
   {
     n: "01",
     title: "Idea & Setup",
-    icon: "bulb",
-    tone: "bg-[#e7f5fc] text-[#2f9fd0]",
+    icon: Lightbulb,
+    card: "bg-[#e7f4fc]",
+    iconColor: "text-[#3aa0d4]",
     items: [
       "Entity structuring & setup",
       "DPIIT & tax benefits",
@@ -22,8 +24,9 @@ const stages: Array<{
   {
     n: "02",
     title: "Early Stage",
-    icon: "gear",
-    tone: "bg-[#e7f8ef] text-[#2ea36a]",
+    icon: Cog,
+    card: "bg-[#e7f8ef]",
+    iconColor: "text-[#3aaa72]",
     items: [
       "Finance setup & SOPs",
       "Book-keeping, payroll & MIS",
@@ -34,8 +37,9 @@ const stages: Array<{
   {
     n: "03",
     title: "Fundraising",
-    icon: "chart",
-    tone: "bg-[#fff4e6] text-[#e39a32]",
+    icon: BarChart3,
+    card: "bg-[#fff4e8]",
+    iconColor: "text-[#e39a3c]",
     items: [
       "Financial model & forecasts",
       "Valuation & ESOP design",
@@ -46,8 +50,9 @@ const stages: Array<{
   {
     n: "04",
     title: "Growth & Scale",
-    icon: "rocket",
-    tone: "bg-[#fdecee] text-[#e15d78]",
+    icon: Rocket,
+    card: "bg-[#fdecef]",
+    iconColor: "text-[#e36b86]",
     items: [
       "Virtual CFO support",
       "Budgeting & profitability",
@@ -58,8 +63,9 @@ const stages: Array<{
   {
     n: "05",
     title: "Expansion & Exit",
-    icon: "target",
-    tone: "bg-[#f3eefb] text-[#7d5fe0]",
+    icon: Target,
+    card: "bg-[#f3eefc]",
+    iconColor: "text-[#7d62d6]",
     items: [
       "Financial due diligence",
       "Valuation & M&A support",
@@ -72,7 +78,7 @@ const stages: Array<{
 export function Journey() {
   return (
     <section className="bg-white" aria-labelledby="journey-heading">
-      <div className="mx-auto max-w-8xl px-5 pt-16 pb-20 lg:px-8 lg:pt-20 lg:pb-24">
+      <div className="mx-auto max-w-8xl px-5 pt-5 pb-20 lg:px-8 lg:pt-10 lg:pb-24">
         <p className="text-[11px] font-semibold tracking-[0.18em] text-[#7f93a6] uppercase">
           Services mapped to your journey
         </p>
@@ -83,30 +89,29 @@ export function Journey() {
           One partner from incorporation to exit
         </h2>
 
-        <div className="-mx-5 mt-9 overflow-x-auto px-5 pb-2 lg:mx-0 lg:overflow-visible lg:px-0">
-          <ol className="flex min-w-[1040px] items-start lg:min-w-0">
+        <div className="mt-8 overflow-x-auto pb-2">
+          <ol className="grid min-w-[1080px] grid-cols-5 gap-x-8 xl:min-w-0">
             {stages.map((stage, index) => (
-              <li key={stage.n} className="flex min-w-0 flex-1 items-start">
-                <div className="min-w-0 flex-1 pr-2">
-                  <div className="flex items-center gap-2.5">
-                    <span className={`grid h-10 w-10 shrink-0 place-items-center rounded-full ${stage.tone}`}>
-                      <Icon name={stage.icon} className="h-[18px] w-[18px]" />
-                    </span>
-                    <span className="text-[13px] font-semibold text-[#9aafc0]">{stage.n}</span>
-                  </div>
-                  <h3 className="mt-3 text-[15px] leading-5 font-bold text-ink">{stage.title}</h3>
-                  <ul className="mt-2.5 space-y-1">
-                    {stage.items.map((item) => (
-                      <li key={item} className="flex gap-2 text-[12.5px] leading-5 text-[#5c6e80]">
-                        <span className="mt-[8px] h-1 w-1 shrink-0 rounded-full bg-[#8ea0b0]" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+              <li key={stage.n} className={`relative flex flex-col rounded-2xl px-4 py-4 ${stage.card}`}>
+                <div className="flex items-center gap-2">
+                  <stage.icon className={`h-5 w-5 ${stage.iconColor}`} strokeWidth={1.75} aria-hidden />
+                  <span className="text-[13px] font-semibold text-[#8aa0b3]">{stage.n}</span>
                 </div>
+                <h3 className="mt-3 text-[15px] leading-5 font-bold text-ink">{stage.title}</h3>
+                <ul className="mt-3 space-y-1.5">
+                  {stage.items.map((item) => (
+                    <li key={item} className="flex gap-2 text-[12.5px] leading-5 text-[#5c6e80]">
+                      <span className="mt-[8px] h-1 w-1 shrink-0 rounded-full bg-[#8ea0b0]" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
                 {index < stages.length - 1 ? (
-                  <span className="mt-3 shrink-0 pr-2 text-[#c5d3df]" aria-hidden>
-                    <Icon name="arrow" className="h-4 w-4" />
+                  <span
+                    className="absolute top-1/2 left-[calc(100%+16px)] -translate-x-1/2 -translate-y-1/2 text-[#b7c6d4]"
+                    aria-hidden
+                  >
+                    <ChevronRight className="h-4 w-4" strokeWidth={1.75} />
                   </span>
                 ) : null}
               </li>

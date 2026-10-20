@@ -19,5 +19,5 @@ export const nav = [
   { href: "/startup", label: "Startup FinMitra", id: "startup" },
   { href: "/cfo", label: "FinMitra CFO", id: "cfo" },
   { href: "/about", label: "About", id: "about" },
-  { href: "/#contact", label: "Contact", id: "contact" },
+  // { href: "/#contact", label: "Contact", id: "contact" },
 ] as const;
