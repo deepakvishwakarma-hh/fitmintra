@@ -19,25 +19,7 @@ export default function Home() {
       <Services />
       <Questions />
       <Journey />
-      <div className="relative bg-band">
-        <svg
-          viewBox="0 0 1440 80"
-          preserveAspectRatio="none"
-          className="absolute top-0 left-0 h-14 w-full -translate-y-full text-band"
-          aria-hidden
-        >
-          <path fill="currentColor" d="M0 80h1440V36C1140 4 860 72 560 42S160 8 0 40v40Z" />
-        </svg>
         <Contact />
-      </div>
-      <svg
-        viewBox="0 0 1440 72"
-        preserveAspectRatio="none"
-        className="block h-14 w-full bg-white text-band"
-        aria-hidden
-      >
-        <path fill="currentColor" d="M0 0h1440v22C1120 68 760 6 420 30S40 64 0 22V0Z" />
-      </svg>
       <About />
     </>
   );

@@ -105,8 +105,13 @@ export function Contact({
   }
 
   return (
-    <section id={id} className="scroll-mt-24 px-5 py-14 lg:px-8 lg:py-16" aria-labelledby={`${id}-heading`}>
-      <div className="mx-auto grid max-w-8xl items-center gap-10 lg:grid-cols-[0.86fr_1.14fr]">
+    <section id={id} className="relative scroll-mt-24 overflow-hidden px-5 py-14 lg:px-8 lg:py-16" aria-labelledby={`${id}-heading`}>
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: "url(/wave.svg)" }}
+      />
+      <div className="relative z-10 mx-auto grid max-w-8xl items-center gap-10 lg:grid-cols-[0.86fr_1.14fr]">
         <div>
           <p className="text-[11px] font-semibold tracking-[0.18em] text-[#8090a0] uppercase">{eyebrow}</p>
           <h2
