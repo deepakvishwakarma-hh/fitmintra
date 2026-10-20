@@ -72,7 +72,7 @@ export function Contact({
   id = "contact",
   eyebrow = "Let's build together",
   title = "Tell us about your company",
-  lede = "Share a few details and we'll connect with you.",
+  lede = "Share a few details, and we’ll connect with you for a complimentary Finance Health Check.",
   submitLabel = "Submit",
   withArrow = false,
 }: {

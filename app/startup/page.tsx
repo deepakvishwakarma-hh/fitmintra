@@ -40,6 +40,7 @@ const plans: Array<{
   tone: string;
   button: string;
   check: string;
+  price: string;
   popular?: boolean;
 }> = [
   {
@@ -54,6 +55,7 @@ const plans: Array<{
     tone: "border-[#d7e8f5]",
     button: "bg-[#2f7de1] hover:bg-[#2469c4]",
     check: "text-[#2f7de1]",
+    price: "₹ 29,000 / month",
   },
   {
     name: "Growth",
@@ -68,6 +70,7 @@ const plans: Array<{
     tone: "border-[#8fd9b0]",
     button: "bg-[#1f9a62] hover:bg-[#188454]",
     check: "text-[#1f9a62]",
+    price: "₹ 49,000 / month",
     popular: true,
   },
   {
@@ -84,6 +87,7 @@ const plans: Array<{
     tone: "border-[#ddd4f5]",
     button: "bg-[#7a5bd4] hover:bg-[#6848c4]",
     check: "text-[#7a5bd4]",
+    price: "₹ 99,000 / month",
   },
 ];
 
@@ -232,15 +236,17 @@ export default function StartupPage() {
                     </li>
                   ))}
                 </ul>
-                <p className="mt-6 text-xs text-[#8aa0b3]">Starting at</p>
-                <p className="text-lg font-bold text-ink">₹ XX,XXX / month</p>
-                <Link
-                  href="#talk"
-                  className={`mt-5 inline-flex items-center justify-center gap-2 rounded-[10px] px-4 py-2.5 text-sm font-semibold text-white ${plan.button}`}
-                >
-                  View Plan
-                  <Icon name="arrow" className="h-3.5 w-3.5" />
-                </Link>
+                <div className="mt-auto pt-6">
+                  <p className="text-xs text-[#8aa0b3]">Starting at</p>
+                  <p className="text-lg font-bold text-ink">{plan.price}</p>
+                  <Link
+                    href="#talk"
+                    className={`mt-4 inline-flex w-full items-center justify-center gap-2 rounded-[10px] px-4 py-2.5 text-sm font-semibold text-white ${plan.button}`}
+                  >
+                    Further Details
+                    <Icon name="arrow" className="h-3.5 w-3.5" />
+                  </Link>
+                </div>
               </article>
             ))}
           </div>

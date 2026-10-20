@@ -44,75 +44,36 @@ const qualities: Array<{ icon: IconName; title: string; body: string; card: stri
   },
 ];
 
-const partners: Array<{
-  name: string;
-  credentials: string;
-  image: string;
-  expertise: string[];
-}> = [
+const partners = [
   {
     name: "Vineet Suri",
     credentials: "CA, MBA, 22+ years",
     image: "/images/partner-vineet.jpg",
-    expertise: [
-      "CFO Advisory & Financial Strategy",
-      "Valuation and M&A Advisory",
-      "Fundraising and Capital Advisory",
-      "Financial Reporting, FP&A, Business Performance Management",
-      "Financial Feasibility and Investment Appraisal",
-    ],
+    title: "CFO Advisory, Financial Planning & Growth Strategy",
   },
   {
     name: "Mahesh Singhal",
     credentials: "CA, 25+ years",
     image: "/images/partner-mahesh.jpg",
-    expertise: [
-      "Valuation & ESOP design",
-      "Due Diligence Readiness & Data room",
-      "Investor and Board Reporting",
-      "Transaction Management",
-      "Restructuring",
-      "Project Finance and M&A Advisory",
-    ],
+    title: "Fund Raising & Investor Support",
   },
   {
     name: "Kalashree Thaliyath",
     credentials: "CA, CS, 18+ years",
     image: "/images/partner-kalashree.jpg",
-    expertise: [
-      "Entity Structuring & Set Up",
-      "Founders Agreements & Cap Table",
-      "Tax Registrations",
-      "Taxation and ROC Compliances",
-      "Forensic & Fraud Reviews",
-      "FEMA/FDI Filings",
-    ],
+    title: "Entity Structuring, Tax and Compliances",
   },
   {
     name: "Gaurav Saxena",
     credentials: "CA, MBA, 20+ years",
     image: "/images/partner-gaurav.jpg",
-    expertise: [
-      "Finance Set up & SOPs",
-      "Book-keeping & Accounting automation",
-      "Profitability & SKU Analysis",
-      "Business Transformation & System Implementation",
-      "Financial Due Diligence and QoE",
-      "Operational and Process Excellence",
-    ],
+    title: "Finance Set-up, Accounting & Bookkeeping",
   },
   {
     name: "Umesh Makkar",
     credentials: "CA, CPA, 27+ years",
     image: "/images/partner-umesh.jpg",
-    expertise: [
-      "Finance Operations",
-      "Payroll/Personnel Benefits",
-      "Risk, Internal Controls and Audit",
-      "Statutory Compliances",
-      "Continuous Improvement/ Automation",
-      "Taxation including Tax benefits for startups",
-    ],
+    title: "Automation, Internal Controls & Due Diligence",
   },
 ];
 
@@ -229,48 +190,25 @@ export default function AboutPage() {
         >
           Five partners. A shared commitment.
         </h2>
-        <ul className="mt-10 grid gap-5 lg:grid-cols-2">
+        <ul className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {partners.map((partner) => (
-            <li key={partner.name} className="rounded-[22px] border border-line bg-white p-6 shadow-[0_12px_30px_-24px_rgba(12,35,64,0.45)]">
-              <div className="flex items-center gap-4">
-                <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full bg-[#eef3f7]">
-                  <Image
-                    src={partner.image}
-                    alt=""
-                    fill
-                    sizes="80px"
-                    className="object-cover object-[center_18%]"
-                  />
-                </div>
-                <div>
-                  <h3 className="text-[17px] font-bold text-ink">{partner.name}</h3>
-                  <p className="text-sm font-semibold text-teal">Partner</p>
-                  <p className="mt-0.5 text-sm text-muted">{partner.credentials}</p>
-                </div>
+            <li key={partner.name} className="text-center">
+              <div className="relative mx-auto h-28 w-28 overflow-hidden rounded-full bg-[#eef3f7]">
+                <Image
+                  src={partner.image}
+                  alt=""
+                  fill
+                  sizes="112px"
+                  className="object-cover object-[center_18%]"
+                />
               </div>
-              <p className="mt-5 text-[13px] font-semibold tracking-[0.04em] text-[#7f93a6] uppercase">
-                Key Areas of Expertise
-              </p>
-              <ul className="mt-2.5 space-y-1.5">
-                {partner.expertise.map((item) => (
-                  <li key={item} className="flex gap-2 text-[13.5px] leading-6 text-[#3e5163]">
-                    <span className="mt-[10px] h-1 w-1 shrink-0 rounded-full bg-teal" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+              <h3 className="mt-4 text-[15px] font-bold text-ink">{partner.name}</h3>
+              <p className="text-sm font-semibold text-teal">Partner</p>
+              <p className="mt-1 text-[13px] text-muted">{partner.credentials}</p>
+              <p className="mt-2 text-[13.5px] leading-5 font-medium text-[#3e5163]">{partner.title}</p>
             </li>
           ))}
         </ul>
-        <div className="mt-10 text-center">
-          <Link
-            href="#connect"
-            className="inline-flex items-center gap-2 rounded-[10px] bg-navy px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#163556]"
-          >
-            Meet Our Partners
-            <Icon name="arrow" className="h-3.5 w-3.5" />
-          </Link>
-        </div>
       </section>
 
       <section id="approach" className="scroll-mt-24 bg-[#f7fafc]" aria-labelledby="approach-heading">
