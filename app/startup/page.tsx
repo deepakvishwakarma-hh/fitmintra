@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Contact } from "@/components/contact";
+import { CaseStudyGrid } from "@/components/case-studies";
+import startupCaseStudies from "@/data/startup-case-studies.json";
 import { Icon, type IconName } from "@/components/icons";
 
 export const metadata: Metadata = {
@@ -293,18 +295,7 @@ export default function StartupPage() {
           Startups we&apos;ve supported.
         </h2>
         <p className="mt-3 text-[15px] text-muted">Real founders. Real journeys. Real outcomes.</p>
-        <div className="mt-8 grid gap-5 md:grid-cols-3">
-          {["One", "Two", "Three"].map((key) => (
-            <article key={key} className="rounded-[20px] border border-line bg-white p-6 shadow-[0_12px_30px_-24px_rgba(12,35,64,0.5)]">
-              <h3 className="text-[15px] font-bold text-ink">Client name</h3>
-              <p className="mt-2 text-sm leading-6 text-muted">Short case study title and outcome.</p>
-              <Link href="#talk" className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-navy hover:text-teal">
-                Read Case Study
-                <Icon name="arrow" className="h-3.5 w-3.5" />
-              </Link>
-            </article>
-          ))}
-        </div>
+        <CaseStudyGrid studies={startupCaseStudies} />
       </section>
 
       <section className="px-5 pb-16 lg:px-8">

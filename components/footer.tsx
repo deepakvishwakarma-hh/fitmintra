@@ -9,82 +9,87 @@ const legal = [
   { href: "/sitemap", label: "Sitemap" },
 ];
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AccountingService",
+  name: site.name,
+  description: site.tagline,
+  email: site.email,
+  telephone: "+919876543210",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: site.address.streetAddress,
+    addressLocality: site.address.addressLocality,
+    postalCode: site.address.postalCode,
+    addressCountry: site.address.addressCountry,
+  },
+  areaServed: "IN",
+};
+
 export function Footer() {
   return (
     <footer className="bg-navy text-white">
-      <div className="mx-auto grid max-w-8xl gap-10 px-5 py-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr] lg:px-8 lg:py-14">
-        <div>
-          <Link href="/" aria-label="FinMitra home">
-            <Logo variant="light" />
-          </Link>
-          <p className="mt-5 max-w-[240px] text-sm leading-6 text-white/75">
-            Finance. Compliance. Strategy.
-            <br />
-            For what&apos;s next.
-          </p>
-        </div>
+      <div className="mx-auto max-w-8xl px-5 py-12 lg:px-8 lg:py-16">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-12 lg:gap-x-10">
+          <div className="sm:col-span-2 lg:col-span-5">
+            <Link href="/" aria-label="FinMitra home" className="inline-flex">
+              <Logo variant="light" />
+            </Link>
+            <p className="mt-5 max-w-xs text-sm leading-6 text-white/75">{site.tagline}</p>
+          </div>
 
-        <address className="flex flex-col gap-3 text-sm not-italic text-white/85">
-          <a href={site.phoneHref} className="inline-flex items-center gap-2.5 hover:text-white">
-            <Icon name="phone" className="h-4 w-4 text-[#7ddec8]" />
-            {site.phoneDisplay}
-          </a>
-          <a href={site.emailHref} className="inline-flex items-center gap-2.5 hover:text-white">
-            <Icon name="mail" className="h-4 w-4 text-[#7ddec8]" />
-            {site.email}
-          </a>
-          <p className="inline-flex items-center gap-2.5">
-            <Icon name="pin" className="h-4 w-4 text-[#7ddec8]" />
-            {site.city}
-          </p>
-        </address>
-
-        <div className="flex flex-col gap-6 sm:flex-row sm:justify-between lg:justify-end lg:gap-16">
-          <nav className="flex flex-col gap-2.5 text-sm text-white/80" aria-label="Footer">
-            {nav.map((item) => (
-              <Link key={item.id} href={item.href} className="hover:text-white">
-                {item.label}
-              </Link>
-            ))}
-          </nav>
-          <div className="text-sm text-white/70">
-            <div className="flex items-center gap-2.5">
-              <a
-                href={site.emailHref}
-                aria-label="Email FinMitra"
-                className="grid h-8 w-8 place-items-center rounded-full border border-white/20 hover:bg-white/10"
-              >
-                <Icon name="linkedin" className="h-3.5 w-3.5" />
-              </a>
-              <a
-                href={site.emailHref}
-                aria-label="Message FinMitra"
-                className="grid h-8 w-8 place-items-center rounded-full border border-white/20 hover:bg-white/10"
-              >
-                <Icon name="facebook" className="h-3.5 w-3.5" />
-              </a>
-              <a
-                href={site.emailHref}
-                aria-label="Contact FinMitra"
-                className="grid h-8 w-8 place-items-center rounded-full border border-white/20 hover:bg-white/10"
-              >
-                <Icon name="x" className="h-3.5 w-3.5" />
-              </a>
-            </div>
-            <p className="mt-4 flex flex-wrap gap-x-2 gap-y-1">
-              {legal.map((item, index) => (
-                <span key={item.href} className="inline-flex items-center gap-2">
-                  {index > 0 ? <span aria-hidden>·</span> : null}
+          <nav className="lg:col-span-3" aria-label="Footer">
+            <h2 className="text-[11px] font-semibold tracking-[0.18em] text-[#7ddec8] uppercase">Explore</h2>
+            <ul className="mt-4 space-y-2.5 text-sm text-white/80">
+              {nav.map((item) => (
+                <li key={item.id}>
                   <Link href={item.href} className="hover:text-white">
                     {item.label}
                   </Link>
-                </span>
+                </li>
               ))}
-            </p>
-            <p className="mt-3 text-[13px] text-white/60">© 2026 FinMitra. All rights reserved.</p>
+            </ul>
+          </nav>
+
+          <div className="lg:col-span-4">
+            <h2 className="text-[11px] font-semibold tracking-[0.18em] text-[#7ddec8] uppercase">Contact</h2>
+            <address className="mt-4 space-y-3 text-sm not-italic text-white/85">
+              <a href={site.phoneHref} className="grid grid-cols-[1.25rem_1fr] items-center gap-3 hover:text-white">
+                <Icon name="phone" className="h-4 w-4 text-[#7ddec8]" />
+                {site.phoneDisplay}
+              </a>
+              <a href={site.emailHref} className="grid grid-cols-[1.25rem_1fr] items-center gap-3 hover:text-white">
+                <Icon name="mail" className="h-4 w-4 text-[#7ddec8]" />
+                {site.email}
+              </a>
+              <p className="grid grid-cols-[1.25rem_1fr] items-start gap-3">
+                <Icon name="pin" className="mt-0.5 h-4 w-4 text-[#7ddec8]" />
+                <span>
+                  {site.address.streetAddress}
+                  <br />
+                  {site.address.addressLocality}-{site.address.postalCode}
+                </span>
+              </p>
+            </address>
           </div>
         </div>
+
+        <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-white/65 sm:flex-row sm:items-center sm:justify-between">
+          <nav aria-label="Legal">
+            <ul className="flex flex-wrap gap-x-5 gap-y-2">
+              {legal.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} className="hover:text-white">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <p>© 2026 FinMitra. All rights reserved.</p>
+        </div>
       </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     </footer>
   );
 }
