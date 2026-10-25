@@ -19,8 +19,10 @@ export default function Home() {
       <Services />
       <Questions />
       <Journey />
-        <Contact />
-      <About />
+        <Contact
+        lede="Change from Finance health check to Complimentary Consultation."
+        />
+      {/* <About /> */}
     </>
   );
 }
